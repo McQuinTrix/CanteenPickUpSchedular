@@ -1,0 +1,7 @@
+{
+	"name":"app_server",
+	"main":"server.js",
+	"dependencies":{
+	     "express":"latest"
+	}
+}
