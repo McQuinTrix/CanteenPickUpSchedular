@@ -1,2 +1,2 @@
-# Canteen-Pick-Up-Schedular
+# Canteen Pick Up Schedular(UC Berkeley Cafeteria)
 
