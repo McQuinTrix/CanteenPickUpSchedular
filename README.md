@@ -1,6 +1,7 @@
 # Canteen Pick Up Schedular(UC Berkeley Cafeteria)
 
 Live Demo: http://uc-berkeley-cafeteria.herokuapp.com/#/
+
 Brower Support: Google Chrome Version 43 and above(tested only)
                 For other browser the /time may/may not work.
               
