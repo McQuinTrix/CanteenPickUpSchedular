@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Welcome to UC Berkley's Online Cafeteria</h1>
+  <input type="text" class="form-control" placeholder="Search the customer" ng-model="search">
+  <div ng-repeat="p in orders | orderBy:'-' | filter: search">
+    <h3>{{p.name}} just ordered !</h3>
+    <table class="table table-striped">
+      <tr ng-repeat="dish in p.order">
+        <td>{{dish.name}}</td>
+      </tr>
+    </table>
+    <em><b>Total charge: {{p.total | currency}} + $1.00 = {{p.total+1 | currency}}</b></em><br/>
+    <em>Will pick up by {{p.time | date:'HH:mma'}}</em>
+  </div>
+</div>
