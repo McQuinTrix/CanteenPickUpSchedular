@@ -1,0 +1,19 @@
+<div class="container" ng-init="isPlaced = 0">
+  <div ng-show="isPlaced == 0">
+    <h1>Select Time To Pick Up Your Order**</h1>
+    <h3>Please select time considering 5-minutes/item rule</h3>
+    <div>
+      <em>All the stores have same pick up station</em><br/><br/>
+
+      <input class='form-control' type="time" name="usr_time" ng-model="time"><br/>
+      <em>**The order will be prepared according to the time you have selected, if you do not arrive by the time selected, it will be not replaced or refunded</em>
+      <br/>
+      <input type="button" value="Place Order" ng-click="placeOrder(); isPlaced = 1" id="place"></input>
+    </div>
+  </div>
+  <div ng-show="isPlaced == 1">
+    <h1>Congratulations <span ng-bind="name"></span>!</h1>
+    <h3>Your order has been placed.</h3>
+    <h4>Pick up by <span>{{time | date:'HH:mma'}}</span></h4>
+  </div>
+</div>
