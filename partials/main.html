@@ -1,0 +1,44 @@
+<div class="container" >
+  <h1>Welcome to UC Berkley's Online Cafeteria</h1>
+  <h4 ng-init="open=0">Enter Your Name, Email and Press Enter</h4>
+  <input type="text" placeholder="Your Name" ng-model="user" ng-disabled="open == 1"></input>
+  <input type="email" placeholder="Email" ng-model="email" ng-disabled="open == 1"></input>
+  <input type="button" value="Enter" ng-click="open=1"></input>
+  <div ng-show="open==1">
+    <h3 ng-init="cafeNo=0">Choose your store</h3>
+    <input type="button" value="Cafe 3" ng-click="cafeNo = 1"></input>
+    <input type="button" value="Clark Kerr" ng-click="cafeNo = 2"></input>
+    <input type="button" value="Crossroads" ng-click="cafeNo = 3"></input>
+    <input type="button" value="FootHill" ng-click="cafeNo = 4"></input>
+    <div id="panels" >
+      <div ng-show="cafeNo > 0">
+        <h3>{{stores[cafeNo-1].name}}</h3>
+        <table class="table table-striped">
+            <tr ng-repeat="menu in stores[cafeNo-1].menu">
+              <td><b>{{menu.name}}</b></td>
+              <td>{{menu.price | currency}}<td>
+              <td><input type="button" value="Add to Cart" ng-click="addToCart(menu.name,menu.price)"></input></td>
+            </tr>
+        </table>
+        <em >*Ordering online costs $1 extra</em>
+      <div>
+    </div>
+    <div id="yourOrder">
+      <div>
+        <h3>Your Cart</h3>
+        <table class="table">
+            <tr ng-repeat="order in orders">
+              <td>{{order.name}}</td>
+              <td>{{order.price | currency}}<td>
+              <td><input type="button" value="Remove" ng-click="Cancel($index)"></input></td>
+            </tr>
+        </table>
+        <ul>
+            <li><b>Total:</b></li>
+            <li>{{total | currency}}</li>
+            <li><input type="button" value="Set Time For Pickup >>" ng-click="timeOrder()"></input></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
