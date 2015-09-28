@@ -2,6 +2,7 @@
 
 Live Demo: 
           Customer Side: https://uc-berkeley-cafeteria.herokuapp.com/#/
+          
           Point Of Sale: https://uc-berkeley-cafeteria.herokuapp.com/#/pos
 
 Brower Support: Google Chrome Version 43 and above(tested only)
