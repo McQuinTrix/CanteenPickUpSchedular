@@ -9,7 +9,7 @@ Live Demo:
 <b>Point Of Sale:</b> https://uc-berkeley-cafeteria.herokuapp.com/#/pos
 
 Brower Support: Google Chrome Version 43 and above(tested only)
-                For other browser the /time may/may not work.
+                For other browser the time may/may not work.
               
 Server Setup: Node.js with Express.js
 
